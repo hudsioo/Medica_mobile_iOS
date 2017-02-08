@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2220D7031E4B0EDB00CBD88C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2220D7001E4B0EDB00CBD88C /* HomeViewController.m */; };
+		2220D7041E4B0EDB00CBD88C /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2220D7021E4B0EDB00CBD88C /* ProfileViewController.m */; };
 		9F4C31211E4AE7DC00BF4C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31201E4AE7DC00BF4C34 /* main.m */; };
 		9F4C31241E4AE7DC00BF4C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31231E4AE7DC00BF4C34 /* AppDelegate.m */; };
 		9F4C31271E4AE7DC00BF4C34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31261E4AE7DC00BF4C34 /* ViewController.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2220D6FF1E4B0EDB00CBD88C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2220D7001E4B0EDB00CBD88C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2220D7011E4B0EDB00CBD88C /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2220D7021E4B0EDB00CBD88C /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		327BC5EE948FD0BDADCF6748 /* libPods-MedicaVIVA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MedicaVIVA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		945767190B49AB311B626458 /* Pods-MedicaVIVA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicaVIVA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicaVIVA/Pods-MedicaVIVA.debug.xcconfig"; sourceTree = "<group>"; };
 		9F4C311C1E4AE7DC00BF4C34 /* MedicaVIVA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicaVIVA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +92,10 @@
 				9F4C31231E4AE7DC00BF4C34 /* AppDelegate.m */,
 				9F4C31251E4AE7DC00BF4C34 /* ViewController.h */,
 				9F4C31261E4AE7DC00BF4C34 /* ViewController.m */,
+				2220D6FF1E4B0EDB00CBD88C /* HomeViewController.h */,
+				2220D7001E4B0EDB00CBD88C /* HomeViewController.m */,
+				2220D7011E4B0EDB00CBD88C /* ProfileViewController.h */,
+				2220D7021E4B0EDB00CBD88C /* ProfileViewController.m */,
 				9F4C31281E4AE7DC00BF4C34 /* Main.storyboard */,
 				9F4C312B1E4AE7DC00BF4C34 /* Assets.xcassets */,
 				9F4C312D1E4AE7DC00BF4C34 /* LaunchScreen.storyboard */,
@@ -217,7 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BD1299249BB4967A3BD29CFD /* [CP] Copy Pods Resources */ = {
@@ -260,6 +270,8 @@
 				9F4C31271E4AE7DC00BF4C34 /* ViewController.m in Sources */,
 				9F8890851E4AF8CF00774341 /* SVProgressHUD.m in Sources */,
 				9F4C31241E4AE7DC00BF4C34 /* AppDelegate.m in Sources */,
+				2220D7031E4B0EDB00CBD88C /* HomeViewController.m in Sources */,
+				2220D7041E4B0EDB00CBD88C /* ProfileViewController.m in Sources */,
 				9F4C31211E4AE7DC00BF4C34 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,6 +39,15 @@
             [UD setObject:res[@"data"] forKey:@"userInfo"];
             [UD synchronize];
             [SVProgressHUD dismiss];
+            
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UITabBarController *tabberViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBar"];
+            [self presentViewController:tabberViewController animated:YES completion:nil];
+            
+
+            
+            
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error: %@", error);
