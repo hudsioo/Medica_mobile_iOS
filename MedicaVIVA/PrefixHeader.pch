@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  MedicaVIVA
+//
+//  Created by hudsioo on 2/8/2560 BE.
+//  Copyright © 2560 qoofhouse. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define UD [NSUserDefaults standardUserDefaults]
+
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+
+
+//---------------------------Base URL------------------------
+#define BASEURL @"http://staging-api.erp-medicaviva.com/index.php/api"
+#define API_KEY @"6611a2e45c5142a6d2c64a3ffb47734ff82a7cb7"
+
+//--------------Mobile API---------------
+#define MOBILEAPI [BASEURL stringByAppendingString:@"/mobile"]
+#define SIGNIN          @"/signin"
+
+//--------------USER API---------------
+#define USERSAPI [BASEURL stringByAppendingString:@"/users"]
+#define SIGNOUT         @"/signout"
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F4C31211E4AE7DC00BF4C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31201E4AE7DC00BF4C34 /* main.m */; };
+		9F4C31241E4AE7DC00BF4C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31231E4AE7DC00BF4C34 /* AppDelegate.m */; };
+		9F4C31271E4AE7DC00BF4C34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31261E4AE7DC00BF4C34 /* ViewController.m */; };
+		9F4C312A1E4AE7DC00BF4C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4C31281E4AE7DC00BF4C34 /* Main.storyboard */; };
+		9F4C312C1E4AE7DC00BF4C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4C312B1E4AE7DC00BF4C34 /* Assets.xcassets */; };
+		9F4C312F1E4AE7DC00BF4C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4C312D1E4AE7DC00BF4C34 /* LaunchScreen.storyboard */; };
+		9F88907E1E4AEA3F00774341 /* logo_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F88907D1E4AEA3F00774341 /* logo_square.png */; };
+		9F8890841E4AF8CF00774341 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F8890811E4AF8CF00774341 /* SVProgressHUD.bundle */; };
+		9F8890851E4AF8CF00774341 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8890831E4AF8CF00774341 /* SVProgressHUD.m */; };
+		AE89BF65A0D8EB6CE04B6716 /* libPods-MedicaVIVA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327BC5EE948FD0BDADCF6748 /* libPods-MedicaVIVA.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		327BC5EE948FD0BDADCF6748 /* libPods-MedicaVIVA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MedicaVIVA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		945767190B49AB311B626458 /* Pods-MedicaVIVA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicaVIVA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicaVIVA/Pods-MedicaVIVA.debug.xcconfig"; sourceTree = "<group>"; };
+		9F4C311C1E4AE7DC00BF4C34 /* MedicaVIVA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicaVIVA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4C31201E4AE7DC00BF4C34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F4C31221E4AE7DC00BF4C34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F4C31231E4AE7DC00BF4C34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F4C31251E4AE7DC00BF4C34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9F4C31261E4AE7DC00BF4C34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F4C31291E4AE7DC00BF4C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F4C312B1E4AE7DC00BF4C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F4C312E1E4AE7DC00BF4C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F4C31301E4AE7DC00BF4C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F88907D1E4AEA3F00774341 /* logo_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_square.png; sourceTree = "<group>"; };
+		9F8890801E4AEC6500774341 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9F8890811E4AF8CF00774341 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = MedicaVIVA/3rdParty/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		9F8890821E4AF8CF00774341 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = MedicaVIVA/3rdParty/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		9F8890831E4AF8CF00774341 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = MedicaVIVA/3rdParty/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		ABA7D1263AEC7221424E7FBB /* Pods-MedicaVIVA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicaVIVA.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedicaVIVA/Pods-MedicaVIVA.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F4C31191E4AE7DB00BF4C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE89BF65A0D8EB6CE04B6716 /* libPods-MedicaVIVA.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		476F323A5A706E9B3D75028E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				327BC5EE948FD0BDADCF6748 /* libPods-MedicaVIVA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F4C31131E4AE7DB00BF4C34 = {
+			isa = PBXGroup;
+			children = (
+				9F8890861E4AF8D600774341 /* SVProgressHUD */,
+				9F4C311E1E4AE7DC00BF4C34 /* MedicaVIVA */,
+				9F4C311D1E4AE7DC00BF4C34 /* Products */,
+				BC6A0039973ACBCB839F48D3 /* Pods */,
+				476F323A5A706E9B3D75028E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9F4C311D1E4AE7DC00BF4C34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C311C1E4AE7DC00BF4C34 /* MedicaVIVA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F4C311E1E4AE7DC00BF4C34 /* MedicaVIVA */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C31221E4AE7DC00BF4C34 /* AppDelegate.h */,
+				9F4C31231E4AE7DC00BF4C34 /* AppDelegate.m */,
+				9F4C31251E4AE7DC00BF4C34 /* ViewController.h */,
+				9F4C31261E4AE7DC00BF4C34 /* ViewController.m */,
+				9F4C31281E4AE7DC00BF4C34 /* Main.storyboard */,
+				9F4C312B1E4AE7DC00BF4C34 /* Assets.xcassets */,
+				9F4C312D1E4AE7DC00BF4C34 /* LaunchScreen.storyboard */,
+				9F4C31301E4AE7DC00BF4C34 /* Info.plist */,
+				9F88907F1E4AEA4300774341 /* Resources */,
+				9F4C311F1E4AE7DC00BF4C34 /* Supporting Files */,
+			);
+			path = MedicaVIVA;
+			sourceTree = "<group>";
+		};
+		9F4C311F1E4AE7DC00BF4C34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C31201E4AE7DC00BF4C34 /* main.m */,
+				9F8890801E4AEC6500774341 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F88907F1E4AEA4300774341 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F88907D1E4AEA3F00774341 /* logo_square.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9F8890861E4AF8D600774341 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9F8890811E4AF8CF00774341 /* SVProgressHUD.bundle */,
+				9F8890821E4AF8CF00774341 /* SVProgressHUD.h */,
+				9F8890831E4AF8CF00774341 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		BC6A0039973ACBCB839F48D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				945767190B49AB311B626458 /* Pods-MedicaVIVA.debug.xcconfig */,
+				ABA7D1263AEC7221424E7FBB /* Pods-MedicaVIVA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F4C311B1E4AE7DB00BF4C34 /* MedicaVIVA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4C31331E4AE7DC00BF4C34 /* Build configuration list for PBXNativeTarget "MedicaVIVA" */;
+			buildPhases = (
+				B13E5627419FDD6A05021296 /* [CP] Check Pods Manifest.lock */,
+				9F4C31181E4AE7DB00BF4C34 /* Sources */,
+				9F4C31191E4AE7DB00BF4C34 /* Frameworks */,
+				9F4C311A1E4AE7DB00BF4C34 /* Resources */,
+				ED3AD7F01D295D5E9AEE7975 /* [CP] Embed Pods Frameworks */,
+				BD1299249BB4967A3BD29CFD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedicaVIVA;
+			productName = MedicaVIVA;
+			productReference = 9F4C311C1E4AE7DC00BF4C34 /* MedicaVIVA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F4C31141E4AE7DB00BF4C34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = qoofhouse;
+				TargetAttributes = {
+					9F4C311B1E4AE7DB00BF4C34 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z8A8UMYRZ6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9F4C31171E4AE7DB00BF4C34 /* Build configuration list for PBXProject "MedicaVIVA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F4C31131E4AE7DB00BF4C34;
+			productRefGroup = 9F4C311D1E4AE7DC00BF4C34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F4C311B1E4AE7DB00BF4C34 /* MedicaVIVA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F4C311A1E4AE7DB00BF4C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8890841E4AF8CF00774341 /* SVProgressHUD.bundle in Resources */,
+				9F4C312F1E4AE7DC00BF4C34 /* LaunchScreen.storyboard in Resources */,
+				9F4C312C1E4AE7DC00BF4C34 /* Assets.xcassets in Resources */,
+				9F4C312A1E4AE7DC00BF4C34 /* Main.storyboard in Resources */,
+				9F88907E1E4AEA3F00774341 /* logo_square.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B13E5627419FDD6A05021296 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD1299249BB4967A3BD29CFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedicaVIVA/Pods-MedicaVIVA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED3AD7F01D295D5E9AEE7975 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedicaVIVA/Pods-MedicaVIVA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F4C31181E4AE7DB00BF4C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4C31271E4AE7DC00BF4C34 /* ViewController.m in Sources */,
+				9F8890851E4AF8CF00774341 /* SVProgressHUD.m in Sources */,
+				9F4C31241E4AE7DC00BF4C34 /* AppDelegate.m in Sources */,
+				9F4C31211E4AE7DC00BF4C34 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9F4C31281E4AE7DC00BF4C34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4C31291E4AE7DC00BF4C34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F4C312D1E4AE7DC00BF4C34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4C312E1E4AE7DC00BF4C34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F4C31311E4AE7DC00BF4C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9F4C31321E4AE7DC00BF4C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F4C31341E4AE7DC00BF4C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 945767190B49AB311B626458 /* Pods-MedicaVIVA.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z8A8UMYRZ6;
+				GCC_PREFIX_HEADER = MedicaVIVA/PrefixHeader.pch;
+				INFOPLIST_FILE = MedicaVIVA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qoofhouse.MedicaVIVA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9F4C31351E4AE7DC00BF4C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA7D1263AEC7221424E7FBB /* Pods-MedicaVIVA.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z8A8UMYRZ6;
+				GCC_PREFIX_HEADER = MedicaVIVA/PrefixHeader.pch;
+				INFOPLIST_FILE = MedicaVIVA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qoofhouse.MedicaVIVA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F4C31171E4AE7DB00BF4C34 /* Build configuration list for PBXProject "MedicaVIVA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4C31311E4AE7DC00BF4C34 /* Debug */,
+				9F4C31321E4AE7DC00BF4C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4C31331E4AE7DC00BF4C34 /* Build configuration list for PBXNativeTarget "MedicaVIVA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4C31341E4AE7DC00BF4C34 /* Debug */,
+				9F4C31351E4AE7DC00BF4C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F4C31141E4AE7DB00BF4C34 /* Project object */;
+}
