@@ -14,13 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - RSBarcodes (0.1.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - RSBarcodes
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  RSBarcodes: 6b062b5aba3e75a5e889b2465ef1bb256215fbd0
 
-PODFILE CHECKSUM: 847d6e51075526ab44e28ac4bed66e2ab0080161
+PODFILE CHECKSUM: d80e3195b8c081ca6d20152c21e9f579e74d9fbb
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

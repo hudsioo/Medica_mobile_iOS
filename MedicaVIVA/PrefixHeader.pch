@@ -25,10 +25,13 @@
 //--------------Mobile API---------------
 #define MOBILEAPI [BASEURL stringByAppendingString:@"/mobile"]
 #define SIGNIN          @"/signin"
+#define GETORDER        @"/getorder" // api_key ,public_key ,invoice_no
+#define UPDATESHIP      @"/updateship" // api_key ,public_key ,order_data ,user_id
 
 //--------------USER API---------------
 #define USERSAPI [BASEURL stringByAppendingString:@"/users"]
 #define SIGNOUT         @"/signout"
+
 
 
 

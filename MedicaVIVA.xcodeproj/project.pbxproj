@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2217661E1E5C2B29006FE697 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 221766171E5C2B29006FE697 /* BEMCheckBox.m */; };
+		2217661F1E5C2B29006FE697 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 221766191E5C2B29006FE697 /* BEMCheckBoxGroup.m */; };
+		221766201E5C2B29006FE697 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2217661B1E5C2B29006FE697 /* BEMAnimationManager.m */; };
+		221766211E5C2B29006FE697 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2217661D1E5C2B29006FE697 /* BEMPathManager.m */; };
 		2220D7031E4B0EDB00CBD88C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2220D7001E4B0EDB00CBD88C /* HomeViewController.m */; };
 		2220D7041E4B0EDB00CBD88C /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2220D7021E4B0EDB00CBD88C /* ProfileViewController.m */; };
+		22520F8A1E51636600308190 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22520F891E51636600308190 /* AudioToolbox.framework */; };
+		22520F8C1E5165CA00308190 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22520F8B1E5165CA00308190 /* beep.mp3 */; };
+		22520F8F1E51742200308190 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22520F8E1E51742200308190 /* OrderViewController.m */; };
+		229A0EF11E5D92BD00CA5EAD /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229A0EF01E5D92BD00CA5EAD /* OrderTableViewCell.m */; };
+		229A0EF71E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229A0EF61E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.m */; };
 		9F4C31211E4AE7DC00BF4C34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31201E4AE7DC00BF4C34 /* main.m */; };
 		9F4C31241E4AE7DC00BF4C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31231E4AE7DC00BF4C34 /* AppDelegate.m */; };
 		9F4C31271E4AE7DC00BF4C34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C31261E4AE7DC00BF4C34 /* ViewController.m */; };
@@ -22,10 +31,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221766161E5C2B29006FE697 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		221766171E5C2B29006FE697 /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBox.m; sourceTree = "<group>"; };
+		221766181E5C2B29006FE697 /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		221766191E5C2B29006FE697 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		2217661A1E5C2B29006FE697 /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
+		2217661B1E5C2B29006FE697 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
+		2217661C1E5C2B29006FE697 /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPathManager.h; sourceTree = "<group>"; };
+		2217661D1E5C2B29006FE697 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
 		2220D6FF1E4B0EDB00CBD88C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		2220D7001E4B0EDB00CBD88C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2220D7011E4B0EDB00CBD88C /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		2220D7021E4B0EDB00CBD88C /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		22520F891E51636600308190 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		22520F8B1E5165CA00308190 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		22520F8D1E51742200308190 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		22520F8E1E51742200308190 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		229A0EEF1E5D92BD00CA5EAD /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		229A0EF01E5D92BD00CA5EAD /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		229A0EF51E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmTrakingNoViewController.h; sourceTree = "<group>"; };
+		229A0EF61E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmTrakingNoViewController.m; sourceTree = "<group>"; };
 		327BC5EE948FD0BDADCF6748 /* libPods-MedicaVIVA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MedicaVIVA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		945767190B49AB311B626458 /* Pods-MedicaVIVA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicaVIVA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicaVIVA/Pods-MedicaVIVA.debug.xcconfig"; sourceTree = "<group>"; };
 		9F4C311C1E4AE7DC00BF4C34 /* MedicaVIVA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicaVIVA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22520F8A1E51636600308190 /* AudioToolbox.framework in Frameworks */,
 				AE89BF65A0D8EB6CE04B6716 /* libPods-MedicaVIVA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,9 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221766151E5C2B1F006FE697 /* BEMCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				221766161E5C2B29006FE697 /* BEMCheckBox.h */,
+				221766171E5C2B29006FE697 /* BEMCheckBox.m */,
+				221766181E5C2B29006FE697 /* BEMCheckBoxGroup.h */,
+				221766191E5C2B29006FE697 /* BEMCheckBoxGroup.m */,
+				2217661A1E5C2B29006FE697 /* BEMAnimationManager.h */,
+				2217661B1E5C2B29006FE697 /* BEMAnimationManager.m */,
+				2217661C1E5C2B29006FE697 /* BEMPathManager.h */,
+				2217661D1E5C2B29006FE697 /* BEMPathManager.m */,
+			);
+			name = BEMCheckBox;
+			path = MedicaVIVA/3rdParty/BEMCheckBox;
+			sourceTree = "<group>";
+		};
 		476F323A5A706E9B3D75028E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22520F891E51636600308190 /* AudioToolbox.framework */,
 				327BC5EE948FD0BDADCF6748 /* libPods-MedicaVIVA.a */,
 			);
 			name = Frameworks;
@@ -69,6 +112,7 @@
 		9F4C31131E4AE7DB00BF4C34 = {
 			isa = PBXGroup;
 			children = (
+				221766151E5C2B1F006FE697 /* BEMCheckBox */,
 				9F8890861E4AF8D600774341 /* SVProgressHUD */,
 				9F4C311E1E4AE7DC00BF4C34 /* MedicaVIVA */,
 				9F4C311D1E4AE7DC00BF4C34 /* Products */,
@@ -94,6 +138,12 @@
 				9F4C31261E4AE7DC00BF4C34 /* ViewController.m */,
 				2220D6FF1E4B0EDB00CBD88C /* HomeViewController.h */,
 				2220D7001E4B0EDB00CBD88C /* HomeViewController.m */,
+				22520F8D1E51742200308190 /* OrderViewController.h */,
+				22520F8E1E51742200308190 /* OrderViewController.m */,
+				229A0EEF1E5D92BD00CA5EAD /* OrderTableViewCell.h */,
+				229A0EF01E5D92BD00CA5EAD /* OrderTableViewCell.m */,
+				229A0EF51E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.h */,
+				229A0EF61E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.m */,
 				2220D7011E4B0EDB00CBD88C /* ProfileViewController.h */,
 				2220D7021E4B0EDB00CBD88C /* ProfileViewController.m */,
 				9F4C31281E4AE7DC00BF4C34 /* Main.storyboard */,
@@ -118,6 +168,7 @@
 		9F88907F1E4AEA4300774341 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22520F8B1E5165CA00308190 /* beep.mp3 */,
 				9F88907D1E4AEA3F00774341 /* logo_square.png */,
 			);
 			name = Resources;
@@ -176,7 +227,7 @@
 				TargetAttributes = {
 					9F4C311B1E4AE7DB00BF4C34 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Z8A8UMYRZ6;
+						DevelopmentTeam = EBWTBNLER8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -206,6 +257,7 @@
 			files = (
 				9F8890841E4AF8CF00774341 /* SVProgressHUD.bundle in Resources */,
 				9F4C312F1E4AE7DC00BF4C34 /* LaunchScreen.storyboard in Resources */,
+				22520F8C1E5165CA00308190 /* beep.mp3 in Resources */,
 				9F4C312C1E4AE7DC00BF4C34 /* Assets.xcassets in Resources */,
 				9F4C312A1E4AE7DC00BF4C34 /* Main.storyboard in Resources */,
 				9F88907E1E4AEA3F00774341 /* logo_square.png in Resources */,
@@ -267,11 +319,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229A0EF71E5E88EA00CA5EAD /* ConfirmTrakingNoViewController.m in Sources */,
 				9F4C31271E4AE7DC00BF4C34 /* ViewController.m in Sources */,
+				221766211E5C2B29006FE697 /* BEMPathManager.m in Sources */,
+				221766201E5C2B29006FE697 /* BEMAnimationManager.m in Sources */,
 				9F8890851E4AF8CF00774341 /* SVProgressHUD.m in Sources */,
 				9F4C31241E4AE7DC00BF4C34 /* AppDelegate.m in Sources */,
+				2217661E1E5C2B29006FE697 /* BEMCheckBox.m in Sources */,
 				2220D7031E4B0EDB00CBD88C /* HomeViewController.m in Sources */,
+				22520F8F1E51742200308190 /* OrderViewController.m in Sources */,
+				2217661F1E5C2B29006FE697 /* BEMCheckBoxGroup.m in Sources */,
 				2220D7041E4B0EDB00CBD88C /* ProfileViewController.m in Sources */,
+				229A0EF11E5D92BD00CA5EAD /* OrderTableViewCell.m in Sources */,
 				9F4C31211E4AE7DC00BF4C34 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +450,7 @@
 			baseConfigurationReference = 945767190B49AB311B626458 /* Pods-MedicaVIVA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z8A8UMYRZ6;
+				DEVELOPMENT_TEAM = EBWTBNLER8;
 				GCC_PREFIX_HEADER = MedicaVIVA/PrefixHeader.pch;
 				INFOPLIST_FILE = MedicaVIVA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -405,7 +464,7 @@
 			baseConfigurationReference = ABA7D1263AEC7221424E7FBB /* Pods-MedicaVIVA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z8A8UMYRZ6;
+				DEVELOPMENT_TEAM = EBWTBNLER8;
 				GCC_PREFIX_HEADER = MedicaVIVA/PrefixHeader.pch;
 				INFOPLIST_FILE = MedicaVIVA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

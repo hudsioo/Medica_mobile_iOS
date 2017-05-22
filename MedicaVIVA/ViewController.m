@@ -19,6 +19,18 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults objectForKey:@"userInfo"] != nil) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UITabBarController *tabberViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBar"];
+        [self presentViewController:tabberViewController animated:YES completion:nil];
+    }
+    
+}
+
 - (IBAction)loginAction:(id)sender {
     [SVProgressHUD show];
     
