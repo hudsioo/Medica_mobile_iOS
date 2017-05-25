@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStylePlain target:self action:@selector(Logout:)] ;
 }
 
 
@@ -41,6 +41,37 @@
     [super viewWillDisappear:animated];
 }
 
+- (void)Logout:(id)sender{
+    AFHTTPSessionManager *manager    = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.requestSerializer        = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
+    NSString *public_key = [[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"] objectForKey:@"public_key"];
+    
+    NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
+
+    parameters[@"api_key"]  = API_KEY;
+    parameters[@"public_key"] = public_key;
+    parameters[@"user_id"] = [UD objectForKey:@"userInfo"][@"id"];
+    
+    [manager POST:[USERSAPI stringByAppendingString:SIGNOUT] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSMutableDictionary * res = [NSMutableDictionary dictionaryWithDictionary:responseObject];
+        
+        if ([res[@"status"] isEqualToString:@"true"]) {
+            
+            [UD removeObjectForKey:@"userInfo"];
+            [UD synchronize];
+            [SVProgressHUD dismiss];
+        
+            [self dismissViewControllerAnimated:YES completion:nil];
+                
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error: %@", error);
+        
+    }];
+    
+}
 
 - (IBAction)showScan:(id)sender{
     
@@ -76,10 +107,6 @@
     [self presentViewController:self.scanner animated:true completion:nil];
      
     
-    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    //OrderViewController *orderViewController = [storyboard instantiateViewControllerWithIdentifier:@"OrderViewController"];
-    //orderViewController.data = res[@"data"];
-    //[self.navigationController pushViewController:orderViewController animated:YES];
 
 }
 

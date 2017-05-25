@@ -13,6 +13,7 @@
 
 @property (nonatomic , weak) IBOutlet UILabel  *invoiceNoLabel;
 @property (nonatomic , weak) IBOutlet UILabel  *trackNoLabel;
+@property (nonatomic , weak) IBOutlet UIButton *addTrackingNumberButton;
 @property (nonatomic , weak) IBOutlet UIButton *statusButton;
 
 @property (nonatomic , weak) IBOutlet UILabel *productLabel;

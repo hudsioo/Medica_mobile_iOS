@@ -25,8 +25,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if([defaults objectForKey:@"userInfo"] != nil) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UITabBarController *tabberViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBar"];
-        [self presentViewController:tabberViewController animated:YES completion:nil];
+        UINavigationController *navigationViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        [self presentViewController:navigationViewController animated:YES completion:nil];
     }
     
 }
@@ -48,17 +48,14 @@
         NSMutableDictionary * res = [NSMutableDictionary dictionaryWithDictionary:responseObject];
         NSLog(@"success! %@", res);
         if ([res[@"status"] isEqualToString:@"true"]) {
+            
             [UD setObject:res[@"data"] forKey:@"userInfo"];
             [UD synchronize];
             [SVProgressHUD dismiss];
             
-            
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            UITabBarController *tabberViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBar"];
-            [self presentViewController:tabberViewController animated:YES completion:nil];
-            
-
-            
+            UINavigationController *navigationViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+            [self presentViewController:navigationViewController animated:YES completion:nil];
             
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

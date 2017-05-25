@@ -9,7 +9,8 @@
 #import "OrderViewController.h"
 #import "OrderTableViewCell.h"
 #import "ConfirmTrakingNoViewController.h"
-
+#import "ProfileViewController.h"
+#import <RSBarcodes.h>
 
 @interface OrderViewController () <UITableViewDelegate , UITableViewDelegate , ConfirmTrackDelegate , BEMCheckBoxDelegate>{
     __weak UIView *_staticView;
@@ -17,11 +18,14 @@
     UIView* backView;
     
     NSInteger checkSum;
+    NSString *qrCodeString;
+    NSString *emsCodeString;
 }
 
 
 @property (nonatomic , weak) IBOutlet UITableView *tableView;
 @property (nonatomic , weak) IBOutlet UIButton *confirmButtom;
+@property (nonatomic, strong) RSScannerViewController *scanner;
 
 
 @end
@@ -51,15 +55,76 @@
 }
 
 - (void)menuButtonTapped{
+    qrCodeString = @"";
+    self.scanner = [[RSScannerViewController alloc] initWithCornerView:YES
+                                                           controlView:YES
+                                                       barcodesHandler:^(NSArray *barcodeObjects) {
+                                                           if (barcodeObjects.count > 0) {
+                                                               [barcodeObjects enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                                                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                                                       AVMetadataMachineReadableCodeObject *code = obj;
+                                                                       
+                                                                       
+                                                                       
+                                                                       qrCodeString = [code stringValue];
+                                                                       [self playSound];
+                                                                       [self getOrder:qrCodeString];
+                                                                       [self.scanner stopRunning];
+                                                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                                                           [self.scanner dismissViewControllerAnimated:YES completion:nil];
+                                                                           
+                                                                       });
+                                                                   });
+                                                               }];
+                                                           }
+                                                           
+                                                       }
+                    
+                                               preferredCameraPosition:AVCaptureDevicePositionBack];
+    
+    [self.scanner setIsButtonBordersVisible:YES];
+    [self.scanner setStopOnFirst:YES];
+    [self presentViewController:self.scanner animated:true completion:nil];
+
+
+}
+-(void) playSound {
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"mp3"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundPath], &soundID);
+    AudioServicesPlaySystemSound(soundID);
+}
+
+- (void)getOrder:(NSString *)invoice_no {
+    [SVProgressHUD show];
+    
+    AFHTTPSessionManager *manager    = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.requestSerializer        = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     
-     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-     ConfirmTrakingNoViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ConfirmTrakingNoViewController"];
-     vc.delegate = self;
-     self.modalPresentationStyle = UIModalPresentationCurrentContext;
-     [self.view insertSubview:backView atIndex:2];
-     [self.navigationController presentViewController:vc animated:YES completion:nil];
-    //dispatch_async(dispatch_get_main_queue(), ^{});
+    NSString *public_key = [[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"] objectForKey:@"public_key"];
+    NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
+    parameters[@"api_key"]  = API_KEY;
+    parameters[@"public_key"] = public_key;
+    parameters[@"invoice_no"] = invoice_no;
+    NSLog(@"invoice = %@",parameters);
+    
+    [manager POST:[MOBILEAPI stringByAppendingString:GETORDER] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSMutableDictionary * res = [NSMutableDictionary dictionaryWithDictionary:responseObject];
+        NSLog(@"success! %@", res);
+        
+        if ([res[@"status"] isEqualToString:@"true"]) {
+            self.data = res[@"data"];
+            [self.tableView reloadData];
+        }
+        
+        [SVProgressHUD dismiss];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error: %@", error);
+        [SVProgressHUD dismiss];
+    }];
+    
     
     
 }
@@ -67,17 +132,108 @@
 - (void)dissMissConfirmTrack{
     [backView removeFromSuperview];
 }
-- (void)addConfirmTrack{
+- (void)addConfirmTrack:(NSString *)productCode{
+    [self getOrder:productCode];
     [backView removeFromSuperview];
-    [self dismissViewControllerAnimated:YES completion:nil];
-
 }
 
 
 - (IBAction)addtrackingNoButtonTapped:(id)sender{
     
+    emsCodeString = @"";
+    self.scanner = [[RSScannerViewController alloc] initWithCornerView:YES
+                                                           controlView:YES
+                                                       barcodesHandler:^(NSArray *barcodeObjects) {
+                                                           if (barcodeObjects.count > 0) {
+                                                               [barcodeObjects enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                                                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                                                       AVMetadataMachineReadableCodeObject *code = obj;
+                                                                       
+                                                                       
+                                                                       
+                                                                       emsCodeString = [code stringValue];
+                                                                       [self playSound];
+                                                                       [self.scanner stopRunning];
+                                                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                                                           [self.scanner dismissViewControllerAnimated:YES completion:^{
+                                                                               [self confirmEMS:emsCodeString];
+                                                                           }];
+                                                                           
+                                                                       });
+                                                                   });
+                                                               }];
+                                                           }
+                                                           
+                                                       }
+                    
+                                               preferredCameraPosition:AVCaptureDevicePositionBack];
+    
+    [self.scanner setIsButtonBordersVisible:YES];
+    [self.scanner setStopOnFirst:YES];
+    [self presentViewController:self.scanner animated:true completion:nil];
+    
+    
+
+}
+
+- (void)confirmEMS:(NSString *)emsString{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ConfirmTrakingNoViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ConfirmTrakingNoViewController"];
+    vc.delegate = self;
+    vc.emsString = emsString;
+    vc.productString = self.data[@"invoice_no"];
+    vc.orderData = self.data;
+    
+    self.modalPresentationStyle = UIModalPresentationPopover;
+    [self.navigationController.view insertSubview:backView atIndex:2];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController presentViewController:vc animated:YES completion:nil];
+        
+    });
+
     
 }
+
+
+
+- (IBAction)confirmButtonTapped:(id)sender{
+    [SVProgressHUD show];
+    
+    AFHTTPSessionManager *manager    = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //[manager.requestSerializer setValue:@"text/html" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *public_key = [[[NSUserDefaults standardUserDefaults] objectForKey:@"userInfo"] objectForKey:@"public_key"];
+    
+    NSMutableDictionary *order_data = [[NSMutableDictionary alloc] init];
+    
+    [order_data setValue:self.data[@"id"] forKey:@"id"];
+    [order_data setValue:self.data forKey:@"ship_tracking"];
+    [order_data setValue:@"3" forKey:@"status"];
+    [order_data setValue:self.data[@"status"] forKey:@"old_status"];
+    [order_data setValue:self.data[@"invoice_no"] forKey:@"invoice_no"];
+    [order_data setValue:self.data[@"employee_id"] forKey:@"employee_id"];
+    
+    
+    NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
+    parameters[@"api_key"]  = API_KEY;
+    parameters[@"public_key"] = public_key;
+    parameters[@"user_id"] = [UD objectForKey:@"userInfo"][@"id"];
+    parameters[@"order_data"] = order_data;
+    
+    [manager POST:[MOBILEAPI stringByAppendingString:UPDATESHIP] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"success! %@", responseObject);
+    
+        [SVProgressHUD dismiss];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error: %@", error);
+        
+    }];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     _staticView.transform = CGAffineTransformMakeTranslation(0, scrollView.contentOffset.y);
@@ -302,7 +458,7 @@
 }
 
 - (void)didTapCheckBox:(BEMCheckBox*)checkBox{
-    NSLog(@"chechBox = %@",checkBox);
+    
     if (checkBox.on) {
         checkSum++;
     }else{

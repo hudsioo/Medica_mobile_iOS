@@ -11,11 +11,11 @@
 @protocol ConfirmTrackDelegate <NSObject>
 
 - (void)dissMissConfirmTrack;
-- (void)addConfirmTrack;
+- (void)addConfirmTrack:(NSString *)productCode;
 
 @end
 
-@interface ConfirmTrakingNoViewController : ViewController
+@interface ConfirmTrakingNoViewController : UIViewController
 
 
 @property (nonatomic , strong) id<ConfirmTrackDelegate> delegate;
@@ -25,5 +25,9 @@
 @property (nonatomic , weak) IBOutlet UIButton *okButton;
 @property (nonatomic , weak) IBOutlet UIButton *closeButton;
 @property (nonatomic , weak) IBOutlet UITextView *detailTextView;
+
+@property (nonatomic , copy) NSString *productString;
+@property (nonatomic , copy) NSString *emsString;
+@property (nonatomic , strong) NSDictionary *orderData;
 
 @end
